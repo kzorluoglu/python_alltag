@@ -11,11 +11,9 @@ def calculate_max(*params):
     print(params)
     print(params[0])
 
-
 calculate_max(2,3,4)
 
 # parameters as args
-
 def f(**args):
     print(args)
 
