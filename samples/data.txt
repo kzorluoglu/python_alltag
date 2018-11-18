@@ -1,2 +1,5 @@
 Lorem ipsum
 Lorem ipsum
+# Special Character for reading
+äüöß
+şiğü
