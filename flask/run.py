@@ -1,13 +1,20 @@
 # coding=utf-8
-from flask import Flask, render_template
+from flask import Flask, render_template, request
 
 app = Flask(__name__)
 
 @app.route("/")
 def hello():
-    items = ['Apple', 'Orange', 'Banana']
-    template = render_template("index.html", name="Koray", items=items)
+
+    template = render_template(
+        "index.html",
+        title = "Welcome to Flask",
+        name = request.args.get("name"),
+        age = request.args.get("age")
+    )
     return template
 
 if __name__ == "__main__":
+    app.jinja_env.auto_reload = True
+    app.config['TEMPLATES_AUTO_RELOAD'] = True
     app.run()
